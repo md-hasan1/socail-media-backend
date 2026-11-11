@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node ./dist/server.js -p 3007",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts -p 3007",
-    "build": "tsc",
+    "start": "node init && node ./dist/server.js -p 3007",
+    "dev": "node init && ts-node-dev --respawn --transpile-only src/server.ts -p 3007",
+    "build": "node init && tsc",
     "generate": "ts-node src/generate-module.ts",
     "postinstall": "prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,9 +32,9 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.654.0",
+    "@aws-sdk/client-s3": "^3.1166.0",
     "@aws-sdk/lib-storage": "^3.654.0",
-    "@aws-sdk/s3-request-presigner": "^3.654.0",
+    "@aws-sdk/s3-request-presigner": "^3.1166.0",
     "@prisma/client": "^5.19.1",
     "@types/jsonwebtoken": "^9.0.6",
     "aws-sdk": "^2.1691.0",
